@@ -127,4 +127,4 @@ with col2:
         time.sleep(2.1)  # wait for 2 seconds to finish the playing of the audio
         sound.empty()  # optionally delete the element afterwards   
         
-        st.success(f'Your Credit Score is:&emsp;{prediction}')
+        st.success(f'Credit score probability is:&emsp;{prediction}')
