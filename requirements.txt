@@ -1,3 +1,4 @@
 scikit-learn==1.0.2
 streamlit==1.10.0
+xgboost==1.6.1
 
