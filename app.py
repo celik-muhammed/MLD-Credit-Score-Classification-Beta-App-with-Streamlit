@@ -104,19 +104,19 @@ col1, col2 = st.columns([4, 6])
 df = user_input_data() 
 with col1:
     if st.checkbox('Show User Inputs:', value=True):
-        st.write(df.T.rename(columns={0:'input_data'}) 
+        st.write(df.T.rename(columns={0:'input_data'}))
 
-# assign for music sound
-video_html = """
-<iframe width="0" height="0" 
-src="https://www.youtube-nocookie.com/embed/t3217H8JppI?rel=0&amp;autoplay=1&mute=0&start=2860&amp;end=2866&controls=0&showinfo=0" 
-allow="autoplay;"></iframe>
-"""
 with col2:
     for i in range(2): 
         st.markdown('#')
     if st.button('Make Prediction'):   
         sound = st.empty()
+        # assign for music sound
+        video_html = """
+            <iframe width="0" height="0" 
+            src="https://www.youtube-nocookie.com/embed/t3217H8JppI?rel=0&amp;autoplay=1&mute=0&start=2860&amp;end=2866&controls=0&showinfo=0" 
+            allow="autoplay;"></iframe>
+            """
         sound.markdown(video_html, unsafe_allow_html=True)
        
         cat = ['Credit_Mix']
