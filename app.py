@@ -124,7 +124,7 @@ with col2:
         prediction = model.predict(df)
         prediction = le.inverse_transform(prediction)[0]
 
-        time.sleep(2.1)  # wait for 2 seconds to finish the playing of the audio
+        time.sleep(3.7)  # wait for 2 seconds to finish the playing of the audio
         sound.empty()  # optionally delete the element afterwards   
         
         st.success(f'Credit score probability is:&emsp;{prediction}')
