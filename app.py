@@ -104,7 +104,7 @@ col1, col2 = st.columns([4, 6])
 df = user_input_data() 
 with col1:
     if st.checkbox('Show User Inputs:', value=True):
-        st.markdown(df.T.rename(columns={0:'input_data'}))
+        st.markdown(df.infer_object().T.rename(columns={0:'input_data'}))
 
 with col2:
     for i in range(2): 
