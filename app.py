@@ -86,13 +86,13 @@ def user_input_data():
     
     data = { 
         'Credit_Mix': Credit_Mix,
-        'Interest_Rate': Interest_Rate,
-        'Outstanding_Debt': Outstanding_Debt,
-        'Delay_from_due_date': Delay_from_due_date,
-        'Total_EMI_per_month': Total_EMI_per_month,
-        'Changed_Credit_Limit': Changed_Credit_Limit,
-        'Monthly_Inhand_Salary': Monthly_Inhand_Salary,
-        'Annual_Income': Annual_Income,
+        'Interest_Rate': float(Interest_Rate),
+        'Outstanding_Debt': float(Outstanding_Debt),
+        'Delay_from_due_date': float(Delay_from_due_date),
+        'Total_EMI_per_month': float(Total_EMI_per_month),
+        'Changed_Credit_Limit': float(Changed_Credit_Limit),
+        'Monthly_Inhand_Salary': float(Monthly_Inhand_Salary),
+        'Annual_Income': float(Annual_Income),
     }
     input_data = pd.DataFrame(data, index=[0])  
     
@@ -104,7 +104,7 @@ col1, col2 = st.columns([4, 6])
 df = user_input_data() 
 with col1:
     if st.checkbox('Show User Inputs:', value=True):
-        st.write(df.convert_dtypes().T.rename(columns={0:'input_data'}))
+        st.write(df.T.rename(columns={0:'input_data'}))
 
 with col2:
     for i in range(2): 
